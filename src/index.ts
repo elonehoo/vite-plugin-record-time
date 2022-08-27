@@ -1,17 +1,16 @@
-import type {Plugin} from 'vite'
+import type { Plugin } from 'vite'
 
-export default ():Plugin =>{
+export default (): Plugin => {
+  const full: Date = new Date()
 
-  const full: Date = new Date();
-
-  let build: Date;
-  let buildEnd: Date;
-  let render: Date;
+  let build: Date
+  let buildEnd: Date
+  let render: Date
 
   return {
-    name:'@elonehoo/vite-plugin-record-time',
-    apply:'build',
-    buildStart(){
+    name: '@elonehoo/vite-plugin-record-time',
+    apply: 'build',
+    buildStart() {
       build = new Date()
     },
     buildEnd() {
@@ -24,7 +23,7 @@ export default ():Plugin =>{
       render = new Date()
     },
     closeBundle() {
-      const end: Date = new Date();
+      const end: Date = new Date()
       // Catch potential render NPEs
       try {
         console.table({
@@ -39,11 +38,11 @@ export default ():Plugin =>{
           full: {
             time: `${((end.getTime() - full.getTime()) / 1000).toFixed(3)}s`,
           },
-        });
-      } catch (error) {
-        if (error instanceof Error) {
-          this.warn(error);
-        }
+        })
+      }
+      catch (error) {
+        if (error instanceof Error)
+          this.warn(error)
       }
     },
   }
