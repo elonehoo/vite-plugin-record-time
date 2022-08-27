@@ -1,33 +1,29 @@
-<div align="center">
-  <img src="./public/logo.svg" wigth='100px' height='100px' />
-</div>
+# vite-plugin-record-time
 
-<h1 align='center'>Titem Mini</h1>
+> Time reporting for Vite project.
 
-## Features
-
-- ⚡️ [Vite 3](https://github.com/vitejs/vite), [pnpm](https://github.com/pnpm/pnpm) - born with fastness
-
-- ✅ Use Vitest for unit and components testing
-
-- 🦾 TypeScript, of course
-
-## Vscode
-
-- [extensions.json](./.vscode/extensions.json)
-
-- [settings.json](./.vscode/settings.json)
-
-## Try it now!
-
-[Create a repo from this template on GitHub](https://github.com/elonehoo/titem-mini/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
+## Install
 
 ```bash
-npx degit elonehoo/titem-mini my-titem-mini-app
-cd my-titem-mini-app
-pnpm install # If you don't have pnpm installed, run: npm install -g pnpm
+# npm
+npm install --save-dev @elonehoo/vite-plugin-record-time
+# yarn
+yarn add --dev @elonehoo/vite-plugin-record-time
+# pnpm
+pnpm install --save-dev @elonehoo/vite-plugin-record-time
+```
+
+## Usage
+
+```typescript
+//vote.config.ts
+import { defineConfig } from 'vite'
+import recordTime from '@elonehoo/vite-plugin-record-time'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    recordTime()
+  ],
+});
 ```
