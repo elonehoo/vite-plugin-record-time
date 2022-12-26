@@ -23,7 +23,7 @@
     "@elonehoo/eslint-config": "2.0.0",
     "@elonehoo/rimraf": "0.0.1",
     "@elonehoo/vite-plugin-type-ts": "0.0.1",
-    "@types/node": "18.11.9",
+    "@types/node": "18.11.18",
     "bumpp": "8.2.1",
     "eslint": "8.28.0",
     "pnpm": "7.17.0",
