@@ -26,6 +26,7 @@ export default (): Plugin => {
       const end: Date = new Date()
       // Catch potential render NPEs
       try {
+        /* eslint-disable no-console */
         console.table({
           build: {
             time: `${((buildEnd.getTime() - build.getTime()) / 1000).toFixed(

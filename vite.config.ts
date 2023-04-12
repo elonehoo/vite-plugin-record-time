@@ -6,12 +6,12 @@ import RecordTime from './src'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins:[
-    RecordTime()
+  plugins: [
+    RecordTime(),
   ],
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
-  }
+  },
 })
