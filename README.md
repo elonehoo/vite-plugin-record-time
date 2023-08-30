@@ -1,3 +1,7 @@
+> **Note**
+>
+> Move to [unplugin-record-time](https://github.com/elonehoo/unplugin-record-time)
+
 # vite-plugin-record-time
 
 > Time reporting for Vite project.
